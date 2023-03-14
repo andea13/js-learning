@@ -424,34 +424,34 @@ const min = 20;
 //Що робить метод .split? Бере рядок і розбиває його на масив за допомогою роздільника,
 // який ми вкказуємо в дужках біля методу(!!!!!обов'язково в лапках!!!!!!)
 
-const string = "JavaScript";
-const letters = string.split("");
-let invertedString = ""; // тут змінна працює в нас по принципу змінної total, до неї потім будемо додавати всі букви в нижнтому і верхньому регістрі
+// const string = "JavaScript";
+// const letters = string.split("");
+// let invertedString = ""; // тут змінна працює в нас по принципу змінної total, до неї потім будемо додавати всі букви в нижнтому і верхньому регістрі
 //invertedString += letter.toUpperCase(); це те ж саме, що й: invertedString = invertedString + letter.toUpperCase();
 //!Як записати букву в нижньому регістрі: letter.toLowerCase(); . І як в верхньому: letter.toUpperCase(); Console так бачить реєстр і фільтрує!!!!
 
-for (letter of letters) {
-  // console.log(letter); //перебираємо масив по символах кожен окремо, після чого нам треба буде побудувати новий рядок,
-  // який винесемо в глобальну змінну const invertedString= "";
-  //тоді створюємо умову для вичислення регістру кожної букви:
+// for (letter of letters) {
+// console.log(letter); //перебираємо масив по символах кожен окремо, після чого нам треба буде побудувати новий рядок,
+// який винесемо в глобальну змінну const invertedString= "";
+//тоді створюємо умову для вичислення регістру кожної букви:
 
-  //   if (letter === letter.toLowerCase()) {
-  //     console.log("Ця буква в малому регістрі! - ", letter);
-  //     invertedString += letter.toUpperCase(); //це перетворює всі відфільтровані маленькі букви і пкеретворює їх в рядок з великих символів
-  //   } else {
-  //     invertedString += letter.toLowerCase();
-  //   }
-  // }
+//   if (letter === letter.toLowerCase()) {
+//     console.log("Ця буква в малому регістрі! - ", letter);
+//     invertedString += letter.toUpperCase(); //це перетворює всі відфільтровані маленькі букви і пкеретворює їх в рядок з великих символів
+//   } else {
+//     invertedString += letter.toLowerCase();
+//   }
+// }
 
-  //Переписуємо те ж самк за допомогою тернарника
-  letter === letter.toLowerCase()
-    ? (invertedString += letter.toUpperCase())
-    : (invertedString += letter.toLowerCase());
-}
+//Переписуємо те ж самк за допомогою тернарника
+//   letter === letter.toLowerCase()
+//     ? (invertedString += letter.toUpperCase())
+//     : (invertedString += letter.toLowerCase());
+// }
 //це перетворює всі відфільтровані маленькі букви і пкеретворює їх в рядок з великих символів
 //
 
-console.log(invertedString);
+// console.log(invertedString);
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //!Задача 7!//
@@ -459,29 +459,29 @@ console.log(invertedString);
 //! slug - це речення або набір слів з яких складається url записаних маленькими буквами через пробіл
 //Заголовок статті складається лише з букв і пробілів
 
-const title = "Top 10 benefits of React framework";
-let normalizedTitle = "";
+// const title = "Top 10 benefits of React framework";
+// let normalizedTitle = "";
 
 //1. Нормалізуємо рядок
 
-normalizedTitle = title.toLowerCase();
+// normalizedTitle = title.toLowerCase();
 // console.log(normalizedTitle);
 
 //має вийти такий slug: top-10-benefits-of-react-framework
 
 //2. Розбиваємо по словах
 
-const words = normalizedTitle.split(" ");
-console.log(words);
+// const words = normalizedTitle.split(" ");
+// console.log(words);
 
 //3. Зшиваємо в один рядок з конекторами
-const slug = words.join("-");
-console.log(slug);
+// const slug = words.join("-");
+// console.log(slug);
 
 //!Chaning - запис декількох методів для одної змінної
 // Можна записати кілька методів підряд, уникаючи проміжних змінних, наприклад на базі попередньої задачки так:
-const slug1 = title.toLowerCase().split(" ").join("-");
-console.log(slug1);
+// const slug1 = title.toLowerCase().split(" ").join("-");
+// console.log(slug1);
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //!Задача 8!//
 //Напиши скрипт, який рахує суму елементів двох масивів
@@ -489,7 +489,7 @@ console.log(slug1);
 const array1 = [5, 10, 15, 20];
 const array2 = [10, 20, 30];
 
-let total = 0;
+// let total = 0;
 
 // for (i = 0; i <= array1.length - 1; i += 1) {
 //   total += array1[i];
@@ -504,8 +504,8 @@ let total = 0;
 //МЕТОД .concat НЕ ДЕСТРУКТИВНИЙ, А ЦЕ ОЗНАЧАЄ, ЩО ВІН НЕ РУЙНУЄ ВИХІДНІ МАСИВИ,
 // А СТВОРЮЄ НОВИЙ ЗШИВАЮЧИ ДВА ВИХІДНИХ, ПРИ ТОМУ ВИХІДНІ МАСИВИ ЗАЛИШАЮТЬСЯ ЯКИМИ Й БУЛИ
 
-const numbers = array1.concat(array2);
-console.log(numbers);
+// const numbers = array1.concat(array2);
+// console.log(numbers);
 
 // for (i = 0; i <= numbers.length - 1; i += 1) {
 //   total += numbers[i];
@@ -514,11 +514,11 @@ console.log(numbers);
 // console.log(total);
 
 //Або ще легше, бо ми ніякий елемент масиву не змінюємо: через for of
-for (number of numbers) {
-  total += number;
-}
+// for (number of numbers) {
+//   total += number;
+// }
 
-console.log(total);
+// console.log(total);
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //!Задача 9!//
@@ -550,3 +550,376 @@ console.log(cards);
 
 cards.splice(2, 1, "Картка-7"); // Замість 0 в додаванні ставимо скільки елементів хочемо видалити
 console.table(cards);
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!ВІДЕО З РЕПЕТОЮ 2 МОДУЛЬ 2
+//!Функції
+// const add = function (x, y) {
+//   console.log(x);
+//   console.log(y);
+// const result = x + y;
+
+// console.log("Hello world");
+
+// return x + y; //в самому кінці тіла функції вказуємо, що нам з тою функції потрібно повернути!
+// }; //Отак в консоль нічого не виведе, бо ми просто оголосили функцію, вона ще не запущена
+//Викликаємо функцію в довільному місці нижче по коду:
+// console.log(add(2, 3)); //оце насправді викликає функцію!
+//                                //                                //                                     //                        //                         //
+// const fn = function () {
+//   console.log(1);
+//   console.log(2);
+//   console.log(3);
+
+//Якщо не оголосити return, тобто те, шо ми хочемо повернути, то повернеться undefined
+// };
+
+// console.log(fn());
+
+//!Задача 1!//
+//Напиши функцію calculateTotalPrice(items), яка приймає масив цін (чисел) і повертає їх суму
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+
+// for (const value of cart) {
+//   total += value;
+// }
+
+// console.log("Total: ", total);
+
+//Все класно, але працює тільки для одного масиву, а якщо нам треба більше масивів порахувати, то кожен цикл треба переписувати
+//тому тут було б добре використати функцію
+
+const calculateTotalPrice = function (items) {
+  console.log("Items всередині функції: ", items);
+  let total = 0;
+
+  for (const item of items) {
+    total += item;
+  }
+
+  return total;
+};
+
+console.log(calculateTotalPrice([1, 2, 3]));
+console.log(calculateTotalPrice([5, 10, 15, 20]));
+console.log(calculateTotalPrice([100, 200, 300]));
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+//!Задача 2!//
+//Напиши функцію logItems для перебору і логування масиву
+
+// logItems(["Mango", "Poly", "Kiwi", "Ajax"]);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(["клавіатура", "гарнітура", "годинник"]);
+
+// const logItems = function (items) {
+//   for (item of items) {
+//     console.log(item);
+//   }
+// };
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+//!Задача 3!//
+//Напишіть функцію findLogin(allLogins, login) для пошуку логіну
+//Якщо логіну нема, то вивести повідомлення: "Користувач [логін] не знайдено."
+//Якщо логін є, то вивести повідомлення: "Користувач [логін] знайдено."
+
+const logins = [
+  "hgjhfdjfhqlrH",
+  "gledhbdfHGKbhf",
+  "polyiscute",
+  "ajbaerivbIkkand",
+];
+
+// const loginToFind = "polyiscute";
+// let message = `Користувач ${loginToFind} не знайдено`;
+
+// message = logins.includes(loginToFind)
+//   ? `Користувач ${loginToFind} знайдено`
+//   : `Користувач ${loginToFind} не знайдено`;
+// console.log(message);
+
+// const findLogin = function (allLogins, loginToFind) {
+// console.log(allLogins);
+// console.log(loginToFind);
+//   let message = `Користувач ${loginToFind} не знайдено`;
+//   for (login of allLogins) {
+//     if (login === loginToFind) {
+//       message = `Користувач ${loginToFind} знайдено`;
+//       return message;
+//     }
+//   }
+//   return message;
+// };
+
+//message тут всюди лишня змінна і займає місце, можна і без неї:
+
+// const findLogin = function (allLogins, loginToFind) {
+// console.log(allLogins);
+// console.log(loginToFind);
+
+//   for (login of allLogins) {
+//     if (login === loginToFind) {
+//       return `Користувач ${loginToFind} знайдено`;
+//     }
+//   }
+//   return `Користувач ${loginToFind} не знайдено`;
+// };
+
+// console.log(findLogin(logins, "hgjhfdjfhqlrH"));
+// console.log(findLogin(logins, "glehkjhjdfHGKbhf"));
+// console.log(findLogin(logins, "polyiscute"));
+// console.log(findLogin(logins, "ajbaerivbIkkand"));
+
+//Та сама задачка через тернарник
+
+//const findLogin = function (allLogins, loginToFind) {
+// console.log(allLogins);
+// console.log(loginToFind);
+
+//   const message = allLogins.includes(loginToFind)
+//     ? `Користувач ${loginToFind} знайдено`
+//     : `Користувач ${loginToFind} не знайдено`;
+//   return message;
+// };
+
+//Але так краще, бо функція перестане виконуватись як тільки буде співпадіння:
+const findLogin = function (allLogins, loginToFind) {
+  return allLogins.includes(loginToFind)
+    ? `Користувач ${loginToFind} знайдено`
+    : `Користувач ${loginToFind} не знайдено`;
+};
+
+console.log(findLogin(logins, "hgjhfdjfhqlrH"));
+console.log(findLogin(logins, "glehkjhjdfHGKbhf"));
+console.log(findLogin(logins, "polyiscute"));
+console.log(findLogin(logins, "ajbaerivbIkkand"));
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+//!Задача 4!//
+//Напиши функцію findSmallestNumber(numbers) для пошуку найменшого числа в масиві, при умові, що числа унікальні (не повторюються)
+const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0]; // - просто як вивести консоль найменшого числа: зазвичай беремо перше по порядку
+//  і далі будемо перебирати в циклі і порівнювати
+
+// console.log(smallestNumber); //консоль найменшого числа
+//! Так як в нас числа ніде значення змінювати не будуть, то ітерацію нам нен треба, можна використати for of:
+// for (number of numbers) {
+//   console.log(number);
+//   if (number < smallestNumber) {
+//     smallestNumber = number; //якщо наступне число менше того, що ми записали раніше, то тепер воно буде найменшим
+//   }
+// }
+
+// console.log(smallestNumber);
+
+const findSmallestNumber = function (numbers) {
+  let smallestNumber = numbers[0];
+
+  for (number of numbers) {
+    if (number < smallestNumber) {
+      smallestNumber = number; //якщо наступне число менше того, що ми записали раніше, то тепер воно буде найменшим
+    }
+  }
+
+  return smallestNumber;
+};
+
+console.log(findSmallestNumber([3, 8, 12, -2, 15]));
+console.log(findSmallestNumber([100, 54, 8, 12, 47]));
+console.log(findSmallestNumber([7, 21, 87, 15, 4]));
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+//!Задача 5!//
+//Напишіть функцію changeCase(string), котра замінює регістр кожного символу в рядку на протилежний
+//Наприклад, якщо рядок "JavaScript", то на виході має вийти "jAVAsCRIPT"
+
+//Що робить метод .split? Бере рядок і розбиває його на масив за допомогою роздільника,
+// який ми вкказуємо в дужках біля методу(!!!!!обов'язково в лапках!!!!!!)
+
+const string = "Chekh Republic";
+
+const changeCase = function (string) {
+  const letters = string.split("");
+  let invertedString = "";
+
+  for (letter of letters) {
+    letter === letter.toLowerCase()
+      ? (invertedString += letter.toUpperCase())
+      : (invertedString += letter.toLowerCase());
+  }
+
+  return invertedString;
+};
+
+console.log(changeCase("June is in Summer"));
+console.log(changeCase("Ukraine will Win this year!"));
+console.log(changeCase("MaNgO"));
+
+// тут змінна працює в нас по принципу змінної total, до неї потім будемо додавати всі букви в нижнтому і верхньому регістрі
+//invertedString += letter.toUpperCase(); це те ж саме, що й: invertedString = invertedString + letter.toUpperCase();
+//!Як записати букву в нижньому регістрі: letter.toLowerCase(); . І як в верхньому: letter.toUpperCase(); Console так бачить реєстр і фільтрує!!!!
+
+// for (letter of letters) {
+// console.log(letter); //перебираємо масив по символах кожен окремо, після чого нам треба буде побудувати новий рядок,
+// який винесемо в глобальну змінну const invertedString= "";
+//тоді створюємо умову для вичислення регістру кожної букви:
+
+//   if (letter === letter.toLowerCase()) {
+//     console.log("Ця буква в малому регістрі! - ", letter);
+//     invertedString += letter.toUpperCase(); //це перетворює всі відфільтровані маленькі букви і пкеретворює їх в рядок з великих символів
+//   } else {
+//     invertedString += letter.toLowerCase();
+//   }
+// }
+
+//Переписуємо те ж самк за допомогою тернарника
+//   letter === letter.toLowerCase()
+//     ? (invertedString += letter.toUpperCase())
+//     : (invertedString += letter.toLowerCase());
+// }
+//це перетворює всі відфільтровані маленькі букви і пкеретворює їх в рядок з великих символів
+//
+
+// console.log(invertedString);
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+//!Задача 5!//
+//Напишіть функцію slugify(string), яка отримає рядок, а повертає URL-slug
+//Рядок складається лише з букв і пробілів
+//! slug - це речення або набір слів з яких складається url записаних маленькими буквами через пробіл
+
+const title = "Top 10 benefits of React framework";
+
+const slugify = function (string) {
+  let normalizedTitle = "";
+
+  normalizedTitle = string.toLowerCase();
+
+  const words = normalizedTitle.split(" ");
+
+  const slug = words.join("-");
+
+  return slug;
+};
+
+console.log(slugify("Top 10 benefits of React framework"));
+console.log(slugify("Azure Static Web Apps are Awesome"));
+console.log(slugify("Technical writing tips for non-native English speakers"));
+
+//1. Нормалізуємо рядок
+
+// normalizedTitle = title.toLowerCase();
+// console.log(normalizedTitle);
+
+//має вийти такий slug: top-10-benefits-of-react-framework
+
+//2. Розбиваємо по словах
+
+// const words = normalizedTitle.split(" ");
+// console.log(words);
+
+//3. Зшиваємо в один рядок з конекторами
+// const slug = words.join("-");
+// console.log(slug);
+
+//!Chaning - запис декількох методів для одної змінної
+// Можна записати кілька методів підряд, уникаючи проміжних змінних, наприклад на базі попередньої задачки так:
+// const slug1 = title.toLowerCase().split(" ").join("-");
+// console.log(slug1);
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Псевдомасив arguments i Array.from
+
+//!Як ми можемо написати функцію для різного числа аргументів? Таке неможливо зробити допоки ми не введемо в функцію локальну змінну arguments
+//!Задача 6!//
+// const fn = function () {
+//   console.log(arguments);
+//Перетворюємо всевдомасив arguments в масив args олдскул методом:
+//   const args = Array.from(arguments);
+//   console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+//Перетворюємо всевдомасив arguments в масив args новішим методом: ...rest - де замість rest будь-яка змінна, через яку ми виведемо масив
+
+// const fn = function (...args) {
+//   console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// function getExtremeElements(array) {
+// Change code below this line
+//   const firstElement = array[0];
+//   const lastElement = array[array.length - 1];
+
+//   return firstElement + lastElement;
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// Change code above this line
+
+// function splitMessage(message, delimiter) {
+//   let words = message.split(delimiter);
+
+//   return words;
+// }
+
+// console.log(splitMessage(["Mango hurries to the train"], ""));
+// console.log(splitMessage(["Mango"], ""));
+// console.log(splitMessage(["best_for_week"], "-"));
+
+// function makeArray(firstArray, secondArray, maxLength) {
+// Change code below this line
+// let newArray = firstArray.concat(secondArray);
+// newArray.length <= maxLength ? newArray.slice : newArray.slice(0, maxLength);
+
+// return newArray;
+// if (newArray.length <= maxLength) {
+//  return newArray;} else {return newArray.slice(0, maxLength);}
+
+// Change code above this line
+// }
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
+// console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+// Change code below this line
+// for (i = 0; i <= order.length - 1; i += 1) {
+//   total += order[i];
+// }
+
+// Change code above this line
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+function getCommonElements(array1, array2) {
+  // Change code below this line
+  let array = [];
+
+  for (i = 0; i < array1.length; i += 1) {
+    if (array2.includes(array1[i])) {
+      array.push(array1[i]);
+    }
+  }
+
+  return array;
+
+  // Change code above this line
+}
