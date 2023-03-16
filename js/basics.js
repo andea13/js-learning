@@ -45,61 +45,61 @@
 // console.log(timeStr);
 
 //Перероблюємо те саме під !!!!!ТЕРНАРНИЙ ОПЕРАТОР!!!!!!
-const hours = 14;
-const minutes = 26;
-let timeStr = minutes === 0 ? `${hours} г.` : `${hours} г. ${minutes} хв.`;
-console.log(timeStr);
+// const hours = 14;
+// const minutes = 26;
+// let timeStr = minutes === 0 ? `${hours} г.` : `${hours} г. ${minutes} хв.`;
+// console.log(timeStr);
 
 //!---------------------------------------------------------------------------------------------------------!//
 //                   Задачка 3     ВКЛАДЕНІ РОЗГАЛУЖЕННЯ             //
-a = 120;
-b = 1;
-if (a > 100 && b > 100) {
-  if (a > b) console.log(a);
-  else b; //можна так записати тернарним оператором: a > b ? console.log(a) : console.log(b);
-} else {
-  console.log(b + 512);
-}
+// a = 120;
+// b = 1;
+// if (a > 100 && b > 100) {
+//   if (a > b) console.log(a);
+//   else b; //можна так записати тернарним оператором: a > b ? console.log(a) : console.log(b);
+// } else {
+//   console.log(b + 512);
+// }
 
 //а замість цієї перевірки можна використати
-console.log(Math.max(a, b));
+// console.log(Math.max(a, b));
 
 //Те саме повністю через тернарний (тернарний всередині тернарного): //! НЕ ЧИТАЄТЬСЯ АДЕКВАТНО, ТАКЕ КРАЩЕ НЕ РОБИТИ!//
-let result = a > 100 && b > 100 ? (a > b ? a : b) : b + 512;
-console.log(result);
+// let result = a > 100 && b > 100 ? (a > b ? a : b) : b + 512;
+// console.log(result);
 
 //!---------------------------------------------------------------------------------------------------------!//
 //                   Задачка 4     SWITCH            //
-const daysUntilDeadline = 5;
+// const daysUntilDeadline = 5;
 
-if (daysUntilDeadline === 0) {
-  console.log("Сьогодні");
-} else if (daysUntilDeadline === 1) {
-  console.log("Завтра");
-} else if (daysUntilDeadline === 2) {
-  console.log("Післяавтра");
-} else {
-  console.log("Дата у майбутньому");
-}
+// if (daysUntilDeadline === 0) {
+//   console.log("Сьогодні");
+// } else if (daysUntilDeadline === 1) {
+//   console.log("Завтра");
+// } else if (daysUntilDeadline === 2) {
+//   console.log("Післяавтра");
+// } else {
+//   console.log("Дата у майбутньому");
+// }
 
 //РОБИМО РЕФАКТОРІНГ ВИКОРИСТОВУЮЧИ SWITCH
-switch (daysUntilDeadline) {
-  case 0: {
-    console.log("Сьогодні");
-    break;
-  }
-  case 1: {
-    console.log("Завтра");
-    break;
-  }
-  case 2: {
-    console.log("Післяавтра");
-    break;
-  }
-  default: {
-    console.log("Дата у майбутньому");
-  }
-}
+// switch (daysUntilDeadline) {
+//   case 0: {
+//     console.log("Сьогодні");
+//     break;
+//   }
+//   case 1: {
+//     console.log("Завтра");
+//     break;
+//   }
+//   case 2: {
+//     console.log("Післяавтра");
+//     break;
+//   }
+//   default: {
+//     console.log("Дата у майбутньому");
+//   }
+// }
 
 //!---------------------------------------------------------------------------------------------------------!//
 //                   Задачка 5     ЦИКЛ for           //
@@ -117,8 +117,8 @@ switch (daysUntilDeadline) {
 //i += 1; - step, після нього крапку з комою вже не ставимо
 //Якщо тіло умови складається з одної строки, то квадоатні дужки для нього можна і не ставити, але якщо більше, то треба.
 
-const max = 100;
-const min = 20;
+// const max = 100;
+// const min = 20;
 
 // for (let i = min; i <= 100; i += 5) {
 //   console.log(i);
@@ -486,8 +486,8 @@ const min = 20;
 //!Задача 8!//
 //Напиши скрипт, який рахує суму елементів двох масивів
 //Пишемо хорошим надійним методом, завжди буде працювати 100%
-const array1 = [5, 10, 15, 20];
-const array2 = [10, 20, 30];
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
 
 // let total = 0;
 
@@ -527,8 +527,8 @@ const array2 = [10, 20, 30];
 //Видалити
 //Додати
 //Обновити
-const cardToRemove = "Картка-3"; //!Якщо елемента, який ми шукаємо в списку нема, то в консоль ми отримаємо: -1!!!!!!!!!!!!!!!
-const cards = ["Картка-1", "Картка-2", "Картка-3", "Картка-4", "Картка-5"];
+// const cardToRemove = "Картка-3"; //!Якщо елемента, який ми шукаємо в списку нема, то в консоль ми отримаємо: -1!!!!!!!!!!!!!!!
+// const cards = ["Картка-1", "Картка-2", "Картка-3", "Картка-4", "Картка-5"];
 // console.table(cards);
 
 //1.МЕТОД INDEX OF
@@ -544,12 +544,12 @@ const cards = ["Картка-1", "Картка-2", "Картка-3", "Картк
 // 3. Додавання елементів по індексу  МЕТОД SPLICE !!!!!!!     splice(position, 0, new_element_1, new_element_2, ...)    !!!!!
 // !!!!!ЯКЩО ДОДАЄМО ЕЛЕМЕНТ В ДОВІЛЬНЕ МІСЦЕ МАСИВУ, А НЕ НА ПОЧАТОК, ЧИ КІНЕЦЬ, ТО ТРЕБА МЕТОД SPLICE
 //!ЯКЩО Ж НА ПОЧАТОК - UNSHIFT, В КІНЕЦЬ - PUSH)
-cards.splice(2, 0, "Картка-7");
-console.log(cards);
+// cards.splice(2, 0, "Картка-7");
+// console.log(cards);
 //4.Оновлення (Заміна) по індексу  МЕТОД SPLICE !!!!!!!
 
-cards.splice(2, 1, "Картка-7"); // Замість 0 в додаванні ставимо скільки елементів хочемо видалити
-console.table(cards);
+// cards.splice(2, 1, "Картка-7"); // Замість 0 в додаванні ставимо скільки елементів хочемо видалити
+// console.table(cards);
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //!ВІДЕО З РЕПЕТОЮ 2 МОДУЛЬ 2
@@ -591,20 +591,20 @@ console.table(cards);
 //Все класно, але працює тільки для одного масиву, а якщо нам треба більше масивів порахувати, то кожен цикл треба переписувати
 //тому тут було б добре використати функцію
 
-const calculateTotalPrice = function (items) {
-  console.log("Items всередині функції: ", items);
-  let total = 0;
+// const calculateTotalPrice = function (items) {
+//   console.log("Items всередині функції: ", items);
+//   let total = 0;
 
-  for (const item of items) {
-    total += item;
-  }
+//   for (const item of items) {
+//     total += item;
+//   }
 
-  return total;
-};
+//   return total;
+// };
 
-console.log(calculateTotalPrice([1, 2, 3]));
-console.log(calculateTotalPrice([5, 10, 15, 20]));
-console.log(calculateTotalPrice([100, 200, 300]));
+// console.log(calculateTotalPrice([1, 2, 3]));
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 //!Задача 2!//
 //Напиши функцію logItems для перебору і логування масиву
@@ -624,12 +624,12 @@ console.log(calculateTotalPrice([100, 200, 300]));
 //Якщо логіну нема, то вивести повідомлення: "Користувач [логін] не знайдено."
 //Якщо логін є, то вивести повідомлення: "Користувач [логін] знайдено."
 
-const logins = [
-  "hgjhfdjfhqlrH",
-  "gledhbdfHGKbhf",
-  "polyiscute",
-  "ajbaerivbIkkand",
-];
+// const logins = [
+//   "hgjhfdjfhqlrH",
+//   "gledhbdfHGKbhf",
+//   "polyiscute",
+//   "ajbaerivbIkkand",
+// ];
 
 // const loginToFind = "polyiscute";
 // let message = `Користувач ${loginToFind} не знайдено`;
@@ -684,20 +684,20 @@ const logins = [
 // };
 
 //Але так краще, бо функція перестане виконуватись як тільки буде співпадіння:
-const findLogin = function (allLogins, loginToFind) {
-  return allLogins.includes(loginToFind)
-    ? `Користувач ${loginToFind} знайдено`
-    : `Користувач ${loginToFind} не знайдено`;
-};
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? `Користувач ${loginToFind} знайдено`
+//     : `Користувач ${loginToFind} не знайдено`;
+// };
 
-console.log(findLogin(logins, "hgjhfdjfhqlrH"));
-console.log(findLogin(logins, "glehkjhjdfHGKbhf"));
-console.log(findLogin(logins, "polyiscute"));
-console.log(findLogin(logins, "ajbaerivbIkkand"));
+// console.log(findLogin(logins, "hgjhfdjfhqlrH"));
+// console.log(findLogin(logins, "glehkjhjdfHGKbhf"));
+// console.log(findLogin(logins, "polyiscute"));
+// console.log(findLogin(logins, "ajbaerivbIkkand"));
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 //!Задача 4!//
 //Напиши функцію findSmallestNumber(numbers) для пошуку найменшого числа в масиві, при умові, що числа унікальні (не повторюються)
-const numbers = [51, 18, 13, 24, 7, 85, 19];
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
 // let smallestNumber = numbers[0]; // - просто як вивести консоль найменшого числа: зазвичай беремо перше по порядку
 //  і далі будемо перебирати в циклі і порівнювати
 
@@ -712,21 +712,21 @@ const numbers = [51, 18, 13, 24, 7, 85, 19];
 
 // console.log(smallestNumber);
 
-const findSmallestNumber = function (numbers) {
-  let smallestNumber = numbers[0];
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
 
-  for (number of numbers) {
-    if (number < smallestNumber) {
-      smallestNumber = number; //якщо наступне число менше того, що ми записали раніше, то тепер воно буде найменшим
-    }
-  }
+//   for (number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number; //якщо наступне число менше того, що ми записали раніше, то тепер воно буде найменшим
+//     }
+//   }
 
-  return smallestNumber;
-};
+//   return smallestNumber;
+// };
 
-console.log(findSmallestNumber([3, 8, 12, -2, 15]));
-console.log(findSmallestNumber([100, 54, 8, 12, 47]));
-console.log(findSmallestNumber([7, 21, 87, 15, 4]));
+// console.log(findSmallestNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallestNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallestNumber([7, 21, 87, 15, 4]));
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 //!Задача 5!//
@@ -736,24 +736,24 @@ console.log(findSmallestNumber([7, 21, 87, 15, 4]));
 //Що робить метод .split? Бере рядок і розбиває його на масив за допомогою роздільника,
 // який ми вкказуємо в дужках біля методу(!!!!!обов'язково в лапках!!!!!!)
 
-const string = "Chekh Republic";
+// const string = "Chekh Republic";
 
-const changeCase = function (string) {
-  const letters = string.split("");
-  let invertedString = "";
+// const changeCase = function (string) {
+//   const letters = string.split("");
+//   let invertedString = "";
 
-  for (letter of letters) {
-    letter === letter.toLowerCase()
-      ? (invertedString += letter.toUpperCase())
-      : (invertedString += letter.toLowerCase());
-  }
+//   for (letter of letters) {
+//     letter === letter.toLowerCase()
+//       ? (invertedString += letter.toUpperCase())
+//       : (invertedString += letter.toLowerCase());
+//   }
 
-  return invertedString;
-};
+//   return invertedString;
+// };
 
-console.log(changeCase("June is in Summer"));
-console.log(changeCase("Ukraine will Win this year!"));
-console.log(changeCase("MaNgO"));
+// console.log(changeCase("June is in Summer"));
+// console.log(changeCase("Ukraine will Win this year!"));
+// console.log(changeCase("MaNgO"));
 
 // тут змінна працює в нас по принципу змінної total, до неї потім будемо додавати всі букви в нижнтому і верхньому регістрі
 //invertedString += letter.toUpperCase(); це те ж саме, що й: invertedString = invertedString + letter.toUpperCase();
@@ -787,23 +787,23 @@ console.log(changeCase("MaNgO"));
 //Рядок складається лише з букв і пробілів
 //! slug - це речення або набір слів з яких складається url записаних маленькими буквами через пробіл
 
-const title = "Top 10 benefits of React framework";
+// const title = "Top 10 benefits of React framework";
 
-const slugify = function (string) {
-  let normalizedTitle = "";
+// const slugify = function (string) {
+//   let normalizedTitle = "";
 
-  normalizedTitle = string.toLowerCase();
+//   normalizedTitle = string.toLowerCase();
 
-  const words = normalizedTitle.split(" ");
+//   const words = normalizedTitle.split(" ");
 
-  const slug = words.join("-");
+//   const slug = words.join("-");
 
-  return slug;
-};
+//   return slug;
+// };
 
-console.log(slugify("Top 10 benefits of React framework"));
-console.log(slugify("Azure Static Web Apps are Awesome"));
-console.log(slugify("Technical writing tips for non-native English speakers"));
+// console.log(slugify("Top 10 benefits of React framework"));
+// console.log(slugify("Azure Static Web Apps are Awesome"));
+// console.log(slugify("Technical writing tips for non-native English speakers"));
 
 //1. Нормалізуємо рядок
 
@@ -909,17 +909,287 @@ console.log(slugify("Technical writing tips for non-native English speakers"));
 // console.log(calculateTotalPrice([164, 48, 291]));
 // console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 
-function getCommonElements(array1, array2) {
-  // Change code below this line
-  let array = [];
+// function getCommonElements(array1, array2) {
+// Change code below this line
+// let array = [];
 
-  for (i = 0; i < array1.length; i += 1) {
-    if (array2.includes(array1[i])) {
-      array.push(array1[i]);
-    }
-  }
+// for (i = 0; i < array1.length; i += 1) {
+//   if (array2.includes(array1[i])) {
+//     array.push(array1[i]);
+//   }
+// }
 
-  return array;
+// return array;
 
-  // Change code above this line
+// Change code above this line
+// }
+
+//!ВІДЕО З РЕПЕТОЮ 1 МОДУЛЬ 3 ОБ'ЄКТИ
+//!ОБ'ЄКТИ
+// Створюємо об'єкт і працюємо з ним
+// const playlist = {
+//   name: "Мій супер плейліст",
+//   rating: 5,
+//   tracks: ["track-1", "track-2", "track-3"],
+//   trackCount: 3,
+// };
+
+//name, rating, tracks, trackCount - це ключі об'єкта, ВОНИ ЗАВЖДИ БУДУТЬ РЯДКАМИ, ХОЧА ТАК ЯВНО НЕ ВИГЛЯДАЮТЬ!!
+//Викликати властивості ключів об'єкта можна такими ДВОМА способами:
+//1//
+// console.log(playlist.tracks);
+// console.log(playlist.name);
+// console.log(playlist.trackCount);
+//2//
+// console.log(playlist["tracks"]);
+// console.log(playlist["trackCount"]); //! тут увага на лапки, не забуваємо їх ставити
+
+//Іноді ім'я властивочті зберігається в змінній:
+const propertyName = "tracks";
+//В такому аипадку звертаємось до властивості таким чином:
+console.log([propertyName]);
+//!Якщо ми звертаємось до властивості, якої в об'єкті не буде, то отримаємо UNDEFINED
+//КОРОТКИЙ ЗАПИС ВЛАСТИВОСТЕЙ
+//Це коли ім'я змінної та ім'я властивості співпадають
+// const username = "Mango";
+// const email = "mango@mail.com";
+
+// const signupData = {
+//   username: username,
+//   email: email,
+// };
+//Щоб так не дублювати ім'я змінної та ім'я властивості придумали коротший запис: //!ТІЛЬКИ ЯКЩО ім'я змінної та ім'я властивості СПІВПАДАЮТЬ
+const username = "Mango";
+const email = "mango@mail.com";
+
+const signupData = {
+  username,
+  email,
+};
+
+//ОБЧИСЛЮВАНІ ВЛАСТИВОСТІ
+{
+  /* <input name="color" value="tomato"></input>; */
 }
+
+const inputName = "color";
+const inputValue = "tomato";
+
+//І коли нам треба перетворити ці змінні inputName і inputValue  в ключі, то записуємо так:
+
+const colorPickerData = {
+  [inputName]: 5, // отримаємо таке: color: 5, -бо і об'єкт підставиться не ім'я змінної, а її значення
+  [inputValue]: "tomato",
+};
+
+console.log(colorPickerData);
+
+//!Чого обчислювані, бо значення ключа вичисляється методом підстановки значення зі змінної
+//ДОДАЄМО ВЛАСТИВОСТІ В ОБ'ЄКТ
+// const playlist = {
+//   name: "Мій супер плейліст",
+//   rating: 5,
+//   tracks: ["track-1", "track-2", "track-3"],
+//   trackCount: 3,
+// };
+
+// playlist.releaseYear = 2016; //Так записуємо нову властивість, якщо такої в об'єкті ще не існує, то вона буде додана!
+
+// console.log(playlist);
+
+//Якщо ж така властивість вже є, то просто перезапишется значення на останнє
+
+// const playlist = {
+//   name: "Мій супер плейліст",
+//   rating: 5,
+//   tracks: ["track-1", "track-2", "track-3"],
+//   trackCount: 3,
+// };
+
+// playlist.rating = 10;
+
+// console.log(playlist);
+
+//!Об'єкт як і масив складний тип даних, того їх порівнювати не можна, як і масиви, БО ПОРІВНЮЮТЬСЯ АДРЕСИ, ДЕ ВОНИ ЛЕЖАТЬ, А НЕ ЗНАЧЕННЯ
+//!Значення порівнюються тільки примітивних типів даних!
+
+console.log({ a: 1 } === { a: 1 }); //false
+
+//!Єдиний випадок, коли ми отримаємо true: коли ми в змінну підставляємо посилання на іншу змінну, тоді посилання рівні
+
+const a = { a: 1, y: 2 };
+const b = a;
+
+console.log(a === b); //true
+
+//Метод об'єкта
+// const playlist = {
+//   name: "Мій супер плейліст",
+//   rating: 5,
+//   tracks: ["track-1", "track-2", "track-3"],
+//   trackCount: 3,
+//Ось так оголошуємо метод об'єкта //!олдскул запис
+// getName: function () {
+//   console.log("А це метод об'єкта");
+// },
+
+//!новий запис
+//   getName() {
+//     console.log("А це метод об'єкта");
+//   },
+// };
+
+// playlist.rating = 10;
+
+//Ось так викликаємо
+
+// playlist.getName();
+
+// console.log(playlist);
+
+//Декілька методів щоб потренуватись
+//!НІКОЛИ В МЕТОДАХ ОБ'ЄКТА НЕ ВИКОРИСТОВУВАТИ ІМ'Я МЕТОДУ ОБ'ЄКТА!!!!!!!!!!!!!!!!!!!!!!!!!
+// const playlist = {
+//   name: "Мій супер плейліст",
+//   rating: 5,
+//   tracks: ["track-1", "track-2", "track-3"],
+//   trackCount: 3,
+
+//   changeName(newName) {
+//     console.log("this в changeName", this);
+
+//     this.name = newName;
+//   },
+//Якщо в властивості стоїть масив, то тоді використовуємо метод .push(параментр, що оголосили в функції), щоб туди додати нове значення
+// addTrack(track) {
+//   this.tracks.push(track);
+// },
+//Якщо просто значення, то перезаписуємо нове значення
+// updateRating(newRating) {
+//   this.rating = newRating;
+//   this.trackCount = this.tracks.length; //це обновляє кількість треків, як тільки ми додаємо новий,
+//робить автоматичний перерахунок після кожного пуша - ТАКЕ СОБІ РІШЕННЯ, КРАЩЕ ДЛЯ ЦЬОГО СТВОРИТИ ОКРЕМИЙ МЕТОД
+// },
+
+// getTrackCount() {
+//   return this.trackCount.length; //!ТРЕБА ТАК, ТАК КРАЩЕ, МОЖЕИО ВИКЛИКАТИ КОЛИ НАМ ТРЕБА
+//   },
+// };
+
+// playlist.changeName("Нове ім'я");
+// playlist.addTrack("Новий трек");
+
+// console.log(playlist.getTrackCount());
+
+// playlist.updateRating(4);
+
+// console.log(playlist);
+
+//ПЕРЕБОР ОБ'ЄКТІВ
+
+const feedback = {
+  good: 5,
+  neutral: 10,
+  bad: 3,
+};
+
+//ПО КЛЮЧАХ
+
+//Результатом методу Object.keys(назва об'єкту) є масив ключів цього об'єкту
+
+const keys = Object.keys(feedback);
+console.log(keys); //['good', 'neutral', 'bad']
+let totalFeedback = 0;
+
+//Перебрати по ключу можна звичайним for of
+
+// for (const key of keys) {
+//   console.log(key);
+
+//Як отримати значення кожного ключа:
+
+// console.log(feedback[key]);
+
+// totalFeedback += feedback[key];
+// }
+
+//ПО VALUE
+
+const values = Object.values(feedback);
+console.log(values);
+
+for (value of values) {
+  console.log(value);
+
+  totalFeedback += value;
+}
+
+console.log("Feedback: ", totalFeedback);
+
+//РОБОТА З КОЛЕКЦІЄЮ (МАСИВОМ ОБ'ЄКТІВ)
+
+// const friends = [
+//   { name: "Mango", online: false },
+//   { name: "Kiwi", online: true },
+//   { name: "Poly", online: true },
+//   { name: "Ajax", online: false },
+// ];
+
+// console.table(friends);
+
+// for (friend of friends) {
+//   friend.newprop = 555;
+//   console.log(friend);
+// }
+
+//Шукаємо друга по імені
+//Якщо в нас масив складних даних, в даному випадку треба перебрати об'єкт поелементно, а потім з цього результату ми можемо витягнути властивість
+
+// const findFriendByName = function (allFriends, name) {
+//   for (friend of allFriends) {
+// console.log(friend); //так отримуємо посилання на кожен елемент цього for
+// console.log(friend.name); //а так окремо для імен
+
+// console.log(friend.name);
+
+//     if (friend.name === name) {
+//       return "Знайшли!!";
+//     }
+//   }
+// };
+
+// console.log(findFriendByName(friends, "Poly"));
+// console.log(findFriendByName(friends, "Chelsy"));
+//!Метод includes підходить тільки, якщо в нас є масив примітивів, а не об'єктів
+//Як отримати масив з імен всіз друзів??
+
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: true },
+  { name: "Ajax", online: false },
+];
+
+// console.table(friends);
+
+// const getAllNames = function (allFriends) {
+//   const names = [];
+
+//   for (const friend of allFriends) {
+//     console.log(friend.name);
+
+//     names.push(friend.name);
+//   }
+
+//   console.log(names);
+
+//   return names;
+// };
+
+//Отримуємо тільки всіх друзів онлайн
+
+const getOnlineFriends = function (allFriends) {
+  for (friend of allFriends) {
+    console.log(friend);
+  }
+};
