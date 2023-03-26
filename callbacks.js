@@ -36,7 +36,7 @@ function createProduct(obj, callback) {
 }
 
 function logProduct(product) {
-  console.table(product);
+  // console.table(product);
 }
 
 logProduct(apple);
@@ -48,11 +48,11 @@ function logTotalPrice({ price, quantity }) {
   console.log(price * quantity);
 }
 
-logTotalPrice(lemon);
+// logTotalPrice(lemon);
 
 //Результат того всього, викликаємо основну функцію, в яку передамо іншу функцію як аргумент
 
-createProduct(apple, logProduct);
+// createProduct(apple, logProduct);
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //* Example 2 - Коллбек функції
 // Додайте об'єкт account методи withdraw(amount, onSuccess, onError)
@@ -80,10 +80,17 @@ const account = {
       onSuccess(`Кошти знято! Поточний баланс : ${this.balance}`);
     }
   },
-  deposit(amount, onSuccess, onError) {},
+  deposit(amount, onSuccess, onError) {
+    if (amount >= TRANSACTION_LIMIT) {
+      onError(`Перевищено ліміт! Поточний ліміт: ${TRANSACTION_LIMIT}`);
+    } else if (amount <= 0) {
+      onError(`Неможливо покласти таку суму! Сума повинна бути більша за 0`);
+    } else {
+      this.balance += amount;
+      onSuccess(`Кошти зараховано. Поточний баланс: ${this.balance}`);
+    }
+  },
 };
-
-account.withdraw(500, handleSuccess, handleError);
 
 function handleSuccess(message) {
   console.log(`✅ Success! ${message}`);
@@ -92,3 +99,100 @@ function handleSuccess(message) {
 function handleError(message) {
   console.error(`❌ Error! ${message}`);
 }
+
+// account.withdraw(500, handleSuccess, handleError);
+// account.withdraw(1500, handleSuccess, handleError);
+// account.deposit(400, handleSuccess, handleError);
+// account.deposit(1200, handleSuccess, handleError);
+// account.deposit(-3, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.withdraw(700, handleSuccess, handleError);
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Напишіть функцію each(array, callback), яка першим параметром очікує масив,
+//а другим - функцію, яка застосовується до кожного елемента масиву.Функція each повинна повернути новий масив,
+//елементами якого будуть результати виклику коллбека.
+
+function each(array, callback) {
+  //1. Cтворимо новий масив, в який ми будемо додавати нові елементи.
+  const newArray = [];
+  //2. Перебір масиву array.
+
+  // for (const el of array) {
+  //   const newEl = callback(el);
+  //   newArray.push(newEl);
+  // }
+
+  //Рефакторимо for на for each
+
+  // array.forEach(function (el) {
+  //   const newEl = callback(el);
+  //   newArray.push(newEl);
+  // });
+
+  //Рефакторимо в стрілочну функцію
+
+  // array.forEach((el) => {
+  //   newEl = callback(el);
+  //   newArray.push(newEl);
+  // });
+
+  //Можна записати ще коротше
+
+  array.forEach((el) => newArray.push(callback(el)));
+
+  //3. Виклик колбек функції на кожному елементі масиву.
+  //4. Запушити у пустий масив видозмінений елемент старого масиву.
+
+  //5. Повернути новий масив.
+  return newArray;
+}
+
+function plusOne(num) {
+  return (num += 1);
+}
+
+function multTwo(num) {
+  return (num *= 2);
+}
+
+function sqrt(num) {
+  return Math.sqrt(num);
+}
+
+const arr = [1, 2, 3, 4, 5];
+
+// const newArr = each(arr, plusOne);
+
+//переписуємо plusOne на інлайн колбек функцію
+
+const newArr = each(arr, (num) => (num += 1));
+
+//переписуємо plusOne на інлайн колбек функцію
+
+// const newArr2 = each(arr, multTwo);
+
+const newArr2 = each(arr, (num) => (num *= 2));
+
+const newArr3 = each(arr, sqrt);
+
+console.log(newArr);
+console.log(newArr2);
+console.log(newArr3);
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+function calculateAverage(...args) {
+  console.log(args);
+  const amount = args.length;
+
+  let total = 0;
+
+  args.forEach((el) => (total += el));
+  console.log(total);
+
+  return total / amount;
+}
+
+console.log(calculateAverage(1, 5, 3, 7, 2));
+console.log(calculateAverage(5, 8));
