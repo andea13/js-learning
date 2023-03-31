@@ -32,7 +32,7 @@ function rentalCarCost(d) {
   let total = 0;
   if (d >= 7) {
     total = costPerDay * d + betterOffer;
-  } else if (d >= 3 || d < 7) {
+  } else if (d >= 3 && d < 7) {
     total = costPerDay * d + goodOffer;
   } else {
     total = costPerDay * d;
@@ -40,4 +40,4 @@ function rentalCarCost(d) {
 
   return total;
 }
-console.log(rentalCarCost(4));
+console.log(rentalCarCost(2));
