@@ -6,7 +6,7 @@
 //!Так створюємо прототипи:  Це просто копіювання, а не створення прототипу
 
 // const objB = Object.create(objC);
-const objB = { ...objC };
+// const objB = { ...objC };
 // objB.y = 2; //створили власну властивість для ObjB
 // const objA = Object.create(objB); //Так створили ще один прототип
 // objA.x = 1; //створили власну властивість для ObjA

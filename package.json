@@ -1,0 +1,25 @@
+{
+  "name": "js-learning",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andea13/js-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andea13/js-learning/issues"
+  },
+  "homepage": "https://github.com/andea13/js-learning#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
